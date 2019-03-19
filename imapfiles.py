@@ -119,7 +119,8 @@ class ImapFiles:
                     filename = 'part-%03d%s' % (counter, 'bin')
                     counter += 1
 
-                message_path = os.path.join(self.destination_folder, mail["From"], datetime.date.today().isoformat(), mail["message-id"])
+#                message_path = os.path.join(self.destination_folder, mail["From"], datetime.date.today().isoformat(), mail["message-id"])
+                message_path = os.path.join(self.destination_folder, datetime.date.today().isoformat())
                 att_path = os.path.join(message_path, filename)
 
                 print 'saving ' + att_path

@@ -1,10 +1,5 @@
-imapfiles    https://github.com/whojarr/imapfiles/
+This fork downloads images from a given IMAP server to a date-stamped folder, ignoring sender and email ID. 
 
-Contact: David Hunter <dhunter@digitalcreation.co.nz>
-
-Copyright (C) 2011 Digital Creation Ltd 
-
-For license information, see LICENSE.txt
 
 Imapfiles was developed as free software to download the attachments contained in emails on an IMAP capable email server and optionally
 archive those messages to another imap folder once processed.
