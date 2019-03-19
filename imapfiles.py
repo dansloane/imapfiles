@@ -86,6 +86,9 @@ class ImapFiles:
         connection.select(mailbox=self.imap_folder)
         response, items = connection.search(None, "ALL") #you could filter using the IMAP rules here (check http://www.example-code.com/csharp/imap-search-critera.asp)
 
+        if items == [b'']:
+            print "Nothing new"
+
         items = items[0].split() # getting the mails id
         for emailid in items:
 
@@ -142,6 +145,8 @@ class ImapFiles:
 
         connection.expunge()
         connection.logout()
+
+        print "Done."
 
 if __name__ == '__main__':
     PARSER = optparse.OptionParser(usage = "Usage: %prog [OPTIONS]", version="%prog 0.1")
