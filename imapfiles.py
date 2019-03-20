@@ -114,7 +114,7 @@ class ImapFiles:
                 if part.get('Content-Disposition') is None:
                     continue
 
-                filename = part.get_filename()
+                filename = '%s_%s' % (emailid, part.get_filename())
                 counter = 1
 
                 # if there is no filename, we create one with a counter to avoid duplicates

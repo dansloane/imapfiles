@@ -7,7 +7,7 @@
 while true; do
     echo $(date +"%T"): Checking...
     ./imapfiles.py -c imapfiles.cfg
-    sleep 60
+    sleep 120
 done
 
 # end
